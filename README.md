@@ -1,4 +1,4 @@
-# 🌐 TechBlog – Internship Project
+# 🌐 TechBlog – Internship Project 🔗 View Demo <!-- https://blog-website-zeta-bay.vercel.app/ -->
 
 **TechBlog** is a fully responsive blog website developed as part of my internship project. The platform focuses on publishing the latest news, tutorials, and awareness posts about **Cybersecurity**, **Ethical Hacking**, and **Tech Innovations**. It demonstrates a complete front-end development cycle using modern HTML, CSS, JavaScript, and Bootstrap practices.
 
