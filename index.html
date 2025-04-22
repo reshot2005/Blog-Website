@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechBlog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Welcome to TechBlog</h1>
+    <p class="subtitle">Discover the latest insights, tutorials, and news from the world of technology and development.</p>
+  </header>
+
+  <div class="search-container text-center my-4">
+    <input type="text" id="searchInput" class="form-control w-50 mx-auto" placeholder="Search blog posts...">
+  </div>
+
+  <section class="section">
+    <h2>Featured Posts</h2>
+    <div class="featured-post-container d-flex overflow-auto gap-4 py-3">
+      <div class="featured-card position-relative text-white" style="min-width: 1300px; height: 300px; background-image: url('https://media.istockphoto.com/id/1047259374/photo/programming-source-code-abstract-background.jpg?s=612x612&w=0&k=20&c=07DAFiujCb58Zgu5ZArLprHiSKew5pCGqbTnop9GclA='); background-size: cover; background-position: center; border-radius: 12px;">
+        <div class="overlay d-flex flex-column justify-content-end p-3" style="background: rgba(0,0,0,0.4); height: 100%; border-radius: 30px;">
+          <span class="badge bg-info mb-1">Cybersecurity</span>
+          <h5>Getting Started with Ethical Hacking</h5>
+          <p class="small">12 min read | Alex Rivera</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="d-flex justify-content-between mb-2">
+    <button class="btn btn-sm btn-outline-secondary" onclick="scrollFeatured(-300)">⟵</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="scrollFeatured(300)">⟶</button>
+  </div>
+  
+  <section class="section">
+    <div class="container py-5">
+      <h1 class="mb-4 text-center">Latest Blog Posts</h1>
+      <div class="row g-4">
+        <!-- Repeat this block for each blog post -->
+        <div class="card-container">
+          <!-- Blog Card 1 -->
+          <div class="card">
+              <a href="https://procomme.com/services/training/cyber-security-training/advanced-network-defense-cast-614/" target="_blank">
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.HuwTYxm1ZM0cFX_Ft7mKtQAAAA&pid=Api&P=0&h=180" alt="Blog Image 1" class="card-img">
+                  <div class="overlay">
+                      <span class="tag">Cybersecurity</span>
+                      <h3 class="title">Advanced Network Defense: Securing Enterprise Infrastructure</h3>
+                      <span class="date">● Published on: April 22, 2025</span>
+                  </div>
+              </a>
+          </div>
+        
+          <!-- Blog Card 2 -->
+          <div class="card">
+            <a href="https://medium.com/@ushah.789012/oscp-2023-tips-for-success-c11ff981fbbc" target="_blank">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.UOF7YaF_XpuC99LxEwlNQAHaEK&pid=Api&P=0&h=180" alt="Blog Image 2" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Certifications</span>
+                    <h3 class="title">OSCP Certification: Tips and Strategies for Success</h3>
+                    <span class="date">● Published on: May 22, 2025</span>
+                </div>
+            </a>
+        </div>
+        
+          <!-- Blog Card 3 -->
+          <div class="card">
+            <a href="https://medium.com/technology-hits/capture-the-flag-ctf-resources-for-beginners-9394ee2ea07a" target="_blank">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.3NExLGpE4AB1IX5lnIP0ZgHaEK&pid=Api&P=0&h=180" alt="Blog Image 3" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Ethical Hacking</span>
+                    <h3 class="title">Capture The Flag (CTF): A Beginner’s Guide</h3>
+                    <span class="date">● Published on: June 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 4 -->
+        <div class="card">
+            <a href="https://www.imperva.com/learn/application-security/ransomware/" target="_blank">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.J_TeuAhy_V4fFhYgr9nW6AHaEH&pid=Api&P=0&h=180" alt="Blog Image 4" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Malware Analysis</span>
+                    <h3 class="title">Understanding Ransomware: Types and Prevention</h3>
+                    <span class="date">● Published on: July 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 5 -->
+        <div class="card">
+            <a href="https://blog.hackbynight.nl/getting-started-with-bug-bounty-hunting-in-2025-a-real-world-guide-051a3fb36376" target="_blank">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.w0pRHF5XGjsqAns5xHJagQHaEK&pid=Api&P=0&h=180" alt="Blog Image 5" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Bug Bounty</span>
+                    <h3 class="title">Getting Started with Bug Bounty Hunting</h3>
+                    <span class="date">● Published on: October 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 6 -->
+        <div class="card">
+            <a href="https://dataspaceacademy.com/blog/red-team-vs-blue-team-understanding-key-differences-skills" target="_blank">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.gts5cxsFFlXsi3XsWBRgegHaD4&pid=Api&P=0&h=180" alt="Blog Image 6" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Red Teaming</span>
+                    <h3 class="title">Red Team vs Blue Team: Key Differences</h3>
+                    <span class="date">● Published on: November 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 7 -->
+        <div class="card">
+            <a href="https://www.linkedin.com/pulse/penetration-testing-hands-on-introduction-p4cuf" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQHGotWn2mct9w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1699369288986?e=2147483647&v=beta&t=FhP8g6S_1YC0ud4kwdZrDV5F9Hhhg5DdZtFHfRLtYHc" alt="Blog Image 7" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Penetration Testing</span>
+                    <h3 class="title">Introduction to Penetration Testing for Beginners</h3>
+                    <span class="date">● Published on: September 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 8 -->
+        <div class="card">
+            <a href="https://binaryte.com/blog/post/digital-forensics-101-understanding-the-basics-of-investigating-cyber-crimes.md/" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/71K0laa+rvL._SY522_.jpg" alt="Blog Image 8" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Digital Forensics</span>
+                    <h3 class="title">Digital Forensics 101: Investigating Cybercrime</h3>
+                    <span class="date">● Published on: January 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Blog Card 9 -->
+        <div class="card">
+            <a href="https://www.cisa.gov/topics/cyber-threats-and-advisories/incident-detection-response-and-prevention" target="_blank">
+                <img src="https://fidelissecurity.com/wp-content/uploads/2024/02/Twitter-Card-Incident-Response.webp" alt="Blog Image 9" class="card-img">
+                <div class="overlay">
+                    <span class="tag">Incident Response</span>
+                    <h3 class="title">Incident Response: Mitigating Cyber Threats</h3>
+                    <span class="date">● Published on: February 22, 2025</span>
+                </div>
+            </a>
+        </div>
+    </div>
+        
+  
+      <!-- Add other blog cards similarly -->
+  
+      <div class="floating-text-containers">
+      </div>
+      <section class="floating-text-section text-center my-5">
+        <div class="floating-text-container">
+          <span class="floating-text">TechBlog</span>
+          <span class="floating-text">Innovation</span>
+          <span class="floating-text">Cybersecurity</span>
+          <span class="floating-text">Hacking</span>
+          <span class="floating-text">Technology</span>
+          <span class="floating-text">Development</span>
+          <span class="floating-text">Coding</span>
+          <!-- Add more text labels as needed -->
+        </div>
+      </section>
+      <!-- Comment Section -->
+      <div id="comment-section">
+        <h3>Leave a Comment</h3>
+        <form id="comment-form">
+          <input type="text" id="username" placeholder="Your name" required>
+          <textarea id="comment" rows="3" placeholder="Your comment..." required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div id="comment-list"></div>
+      </div>
+      
+
+
+      <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>About TechBlog</h5>
+          <p>A platform dedicated to sharing knowledge and insights about technology, development, and design.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Connect With Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+          <form class="mt-3">
+            <label for="email" class="form-label">Subscribe to our newsletter</label>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background-animation">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+  <!-- Matrix Background Canvas -->
+  <div class="background-animation">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+  <!-- Matrix Canvas Script -->
+  <script>
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "10101000110101010110010101";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#0f0";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 50);
+  </script>
+
+  <!-- Comment Script -->
+<script>
+  const form = document.getElementById('comment-form');
+  const commentList = document.getElementById('comment-list');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+
+    if (username && comment) {
+      const commentItem = document.createElement('div');
+      commentItem.classList.add('comment-item');
+      commentItem.innerHTML = `<strong>${username}:</strong><p>${comment}</p>`;
+      commentList.prepend(commentItem);
+      form.reset();
+    }
+  });
+</script>
+
+</body>
+</html>

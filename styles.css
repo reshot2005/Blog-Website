@@ -1,0 +1,353 @@
+body {
+  background-color: #0f1117;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.section {
+  padding: 2rem 5%;
+}
+
+.section h2 {
+  color: white;
+  border-bottom: 2px solid #36afaf;
+  padding-bottom: 0.5rem;
+}
+
+.featured-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.featured-post .card {
+  background-color: #111827;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  max-width: 1500px;
+
+}
+
+.featured-post-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+.featured-post-container .featured-card {
+  flex-shrink: 0;
+  width: 300px;  /* Adjust based on your desired width for featured posts */
+  height: 300px;  /* Same height as before */
+  border-radius: 12px;
+}
+
+
+.featured-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content .description {
+  color: #6c6d6f;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.tag {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.card .overlay .date {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #ccc; /* light gray */
+  font-style: italic;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+
+.card-title {
+  color: #00f2ff;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #e2e8f0;
+}
+
+.badge {
+  background-color: #0ea5e9;
+}
+
+a {
+  color: #00f2ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #444;
+  display: inline-block;
+  margin-right: 8px;
+
+}
+
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.05;
+    pointer-events: none;
+}
+#matrixCanvas {
+    width: 100%;
+    height: 100%;
+}
+#floating-text-containers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Below UI, above matrix if needed */
+}
+
+.floating-label {
+  position: absolute;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+  animation: floatAnim linear infinite;
+  font-weight: bold;
+  user-select: none;
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+.floating-text-section {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: #1e1e1e;  /* Dark background for contrast */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-text-container {
+  display: flex;
+  gap: 20px;
+  animation: floatText 10s ease-in-out infinite;
+}
+
+.floating-text {
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: floatTextEffect 4s infinite;
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px); /* Move up by 100px */
+  }
+}
+
+@keyframes floatTextEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+#comment-section {
+  max-width: 600px;
+  margin: 20px auto;
+}
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#comment-form input,
+#comment-form textarea {
+  padding: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+#comment-form button {
+  padding: 8px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#comment-form button:hover {
+  background-color: #0056b3;
+}
+#comment-list {
+  margin-top: 20px;
+}
+.comment-item {
+  background: #5a5a5a;
+  border-left: 3px solid #007BFF;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.comment-item strong {
+  color: #333;
+}
+#comment-list .comment-item {
+  background: #121213;
+  border-left: 4px solid #007bff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+#comment-list .comment-item strong {
+  color: #636262;
+}
+
+
+.footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: #38bdf8;
+}
+
+.footer a:hover {
+  color: #7dd3fc;
+}
